@@ -4,7 +4,7 @@ import { View, Button, Text } from '@tarojs/components'
 
 import { add, minus, asyncAdd } from '../../actions/counter'
 
-import './index.scss'
+import './userInfo.scss'
 
 
 @connect(({ counter }) => ({
@@ -20,7 +20,7 @@ import './index.scss'
     dispatch(asyncAdd())
   }
 }))
-class Index extends Component {
+class Nodes extends Component {
   componentWillReceiveProps (nextProps) {
     console.log(this.props, nextProps)
   }
@@ -33,16 +33,12 @@ class Index extends Component {
 
   render () {
     return (
-      <View className='index'>
-        <Button className='add_btn' onClick={this.props.add}>+</Button>
-        <Button className='dec_btn' onClick={this.props.dec}>-</Button>
-        <Button className='dec_btn' onClick={this.props.asyncAdd}>async</Button>
-        <View><Text>{this.props.counter.num}</Text></View>
-        <View><Text>Hello, World</Text></View>
+      <View className='userInfo'>
+        
       </View>
     )
   }
 }
 
-export default Index
+export default Nodes
 
